@@ -1,0 +1,41 @@
+<div class="container">
+   <div class="jumbotron text-center" style="margin: 70px">
+	   <h1>List of petitions</h1>
+		<br><br>
+		<ul class="list-group" ng-repeat="petition in petitions">
+        <li class="list-group-item">{{ petition }}</li>
+		</ul>
+
+	</div>
+  <div class="jumbotron" ng-repeat="petition in petitions">
+	<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ petition.petitiontitle }}</h3>
+  </div>
+
+  <div class="panel-body">
+    {{ petition.petitionsubtitle }}<br>
+    {{ petition.petitionstartdate }}<br>
+	  Total count views:{{ petition.petitioncountview }}<br>
+    <button type="button" class="btn btn-info " data-toggle="collapse" data-target="#demo" style="float: right">
+      <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+    <div id="demo" class="collapse"><br><br>
+  Backstory behind petition:{{ petition.petitionbackstory }}<br><br>
+  Loaction:{{ petition.petitionlocation }}<br><br>
+  {{ petition.petitionstatus }}<br><br>
+	{{ petition.petitionprooflink }}<br><br>
+		Number of yes':{{ petition.petitioncountyes }}<br><br>
+		Number of no's:{{ petition.petitioncountno }}<br><br>
+		Number of engagements:{{ petition.petitiontotalengagement}}<br><br>
+  <h4>Would you  like to extend your support for this cause</h4><br>
+
+    	<a href="#" class="btn btn-success" role="button" method="POST">Yes</a>
+    	<a href="#" class="btn btn-info" role="button">No</a>
+
+
+  		</div>
+	</div>
+	</div>
+
+	</div>
+</div>
